@@ -7,21 +7,38 @@ Generating high-quality 3D assets from textual descriptions remains a pivotal ch
 
 ## Video results
 
-https://github.com/user-attachments/assets/09f515fd-49ce-43cb-bc94-e8b423609466
-
-A corgi is positioned to the left of a LEGO house, while a car with its front half made of cheese and its rear half made of sushi is situated to the right of the house made of LEGO.
-
-https://github.com/user-attachments/assets/562acb01-2d24-4b6e-8535-36f2bcf1704c
+https://github.com/user-attachments/assets/c321b2b8-ad6e-4eb1-bf6d-00445bb4348d
 
 A rabbit sits atop a large, expensive watch with many shiny gears, made half of iron and half of gold, eating a birthday cake that is in front of the rabbit.
 
-https://github.com/user-attachments/assets/f6e9e308-91e9-4ed1-ad1d-f97b859d7173
+https://github.com/user-attachments/assets/803d6cea-2f30-42b6-a3ca-aff2eb256d64
+
+A corgi is positioned to the left of a LEGO house, while a car with its front half made of cheese and its rear half made of sushi is situated to the right of the house made of LEGO.
+
+https://github.com/user-attachments/assets/8fa7ff7c-3f3c-47c2-8175-2f3c4563d549
+
+A hamburger, a loaf of bread, an order of fries, and a cup of Coke.
+
+https://github.com/user-attachments/assets/ad6c607a-fb8c-4d52-848c-cc6dfa19d0df
+
+A cozy scene with a plush triceratops toy surrounded by a plate of chocolate chip cookies, a glistening cinnamon roll, and a flaky croissant.
+
+<details>
+    <summary>More results</summary>
+
+https://github.com/user-attachments/assets/9688d8e1-6ac7-49e6-abfb-ca649a1b32c1
+
+A mannequin adorned with a dress made of feathers and moss stands at the center, flanked by a vase with a single blue tulip and another with blue roses.
+
+https://github.com/user-attachments/assets/6fdbce53-5146-4b23-adfe-2cfb66208c1b
 
 A pyramid-shaped burrito artistically blended with the Great Pyramid.
 
-https://github.com/user-attachments/assets/bc888db3-02de-42d9-ab31-229d9fe7d7c1
+https://github.com/user-attachments/assets/2e0d2aed-c771-4783-b5ca-5406e1187859
 
 A train with a front made of cake and a back of a steam engine.
+</details>
+
 ## Quick Start
 
 1. **Install the requirements:**
