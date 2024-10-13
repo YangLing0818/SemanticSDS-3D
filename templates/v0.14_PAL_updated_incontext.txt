@@ -1,0 +1,120 @@
+You are a proficient 3D scene designer with the ability to effectively position 3D models within a 3D cubic space. Using a provided scene description, please carry out the following tasks:
+
+1. Identify 3D Models:
+   - Identify and list the 3D models mentioned in the description.
+2. Write Python Code to Estimate Dimensions and Arrange 3D models:
+
+   - Measure the dimensions of each 3D model as if they were toys. They don't need to be realistic, but they should fit together in one cubic space. Models can differ in size but shouldn't be more than twice as big as the smallest one.
+
+   - Arrange the identified 3D models in a 3D cubic space centered at coordinates [0, 0, 0], with measurements in centimeters. The x-axis should point towards the observer, the y-axis should extend to the right of observer, and the z-axis should point upwards. For each 3D model, determine its placement by specifying the coordinates of its center in the format of [x coordinate, y coordinate, z coordinate]. Ensure that the 3D models are positioned in a plausible manner, avoiding overlaps or extending beyond the confines of the defined space. If necessary, you may make educated estimations to achieve a coherent arrangement.
+
+Here are some examples, follow the example to design the 3D scene:
+
+******
+
+Scene description: A corgi wearing a beret is situated to the left of a house, while a car is positioned to the right of the house. The house itself straddles a divide that separates spring and winter horizontally. The car above is split into two layers along the depth axis. The front layer of the car is constructed from wood. The left half of the rear layer is made of sushi, and the right half is made of cheese.
+
+Let's think step by step and write the python codes.
+
+Task 1: Identify Models. Identify and list the 3D models mentioned in the description. If two models are closely associated, such as "a chess set with its pieces", "a ficus in a pot" or "a mannequin adorned with a dress", I will identify them as one model.
+
+From the scene description, the tangible models mentioned are:
+
+1. Corgi dog
+2. Beret hat
+3. House
+4. Car (including its detailed composition of wood, sushi, and cheese)
+
+```python
+models = {
+    "corgi": {"object description": "Corgi dog"},
+    "beret": {"object description": "Beret hat"},
+    "house": {"object description": "The house straddles a divide that separates spring and winter horizontally."},
+    "car": {"object description": "Car, with front layer made of wood and rear layer made of sushi and cheese. The left half of the rear layer is made of sushi, and the right half is made of cheese."}
+}
+```
+
+Task 2: Estimate Dimensions. 
+
+For the scene description that involves a corgi, a beret, a house, and a car with layered materials, let's estimate the dimensions of each model to ensure they fit within a unified cubic space.
+
+### Estimating Dimensions
+
+Given the whimsical nature of the scene, dimensions are toy-like and balanced to create an appealing setup:
+
+```python
+models["corgi"]["dimension"] = {"x": 30, "y": 15, "z": 20}  # cm
+
+models["beret"]["dimension"] = {"x": 15, "y": 15, "z": 5}  # cm, diameter fitting the corgi's head, thickness/height when laid flat
+
+models["house"]["dimension"] = {"x": 45, "y": 30, "z": 35}  # cm, the size of a house can vary widely. For this scenario, I'll assume it's a model whose size is close to the corgi so it can be placed in the same 3D cubic space with other models.
+
+models["car"]["dimension"] = {"x": 40, "y": 20, "z": 15}  # cm, toy car size fitting the scene
+```
+
+Task3: Calculate the positions considering viewing from the front. Arrange the identified 3D models in a 3D cubic space centered at coordinates [0, 0, 0]. The x-axis should point towards the observer, the y-axis should extend to the right of observer, and the z-axis should point upwards.
+
+Tips: Some models' positions depend on the position and dimensions of other models. We must ensure that any model used in the calculation of another model's position has already been positioned. Start with models that do not depend on the position of other models. Position dependent models after their dependencies are positioned.
+
+Corgi will be placed to the left(negative y direction) of the house, so it won't be obstructed by the house. And since view from front, assuming the corgi is positioned with its length along the x-axis facing forward.
+
+The house will be to the right of the Corgi, also on the ground.
+
+The beret is on top of the corgi's head.
+
+We need to arrange the models such that they are plausible and visually balanced. Here's the layout:
+
+1. **Corgi** is to the left of the house.
+2. **Beret** is positioned on the corgi's head.
+3. **House** is centrally located.
+4. **Car** is to the right of the house.
+
+#### Calculating Positions
+
+We'll start by placing the house at the center, then position the corgi and car relative to the house, and finally, place the beret on top of the corgi.
+
+```python
+# Center the house at the origin, on the ground
+models["house"]["position"] = {
+    # Centered on x-axis, no horizontal offset
+    "x": 0,
+    # Centered on y-axis, no sideways offset
+    "y": 0,
+    # Half the height of the house off the ground to represent the house sitting on the ground
+    "z": models["house"]["dimension"]["z"] / 2
+}
+
+# Position the corgi to the left of the house, on the ground
+models["corgi"]["position"] = {
+    # Centered on x-axis, aligned with the house
+    "x": 0,
+    "y": models["house"]["position"]["y"] - (models["house"]["dimension"]["y"] / 2 + models["corgi"]["dimension"]["y"] / 2 + 5),  # 5 cm gap
+    # Half the height of the corgi off the ground to represent the corgi sitting on the ground
+    "z": models["corgi"]["dimension"]["z"] / 2
+}
+
+# Place the beret on top of the corgi's head
+models["beret"]["position"] = {
+    # Centered along the x-axis over the corgi's head
+    "x": models["corgi"]["position"]["x"] + (models["corgi"]["dimension"]["x"] / 2 - models["beret"]["dimension"]["x"] / 2),
+    # No sideways offset, aligned above the corgi's head
+    "y": models["corgi"]["position"]["y"],
+    # On top of the corgi's head, taking into account the height of the corgi and half the thickness of the beret
+    "z": models["corgi"]["position"]["z"] + models["corgi"]["dimension"]["z"] / 2 + models["beret"]["dimension"]["z"] / 2
+}
+
+# Position the car to the right of the house, on the ground
+models["car"]["position"] = {
+    "x": 0,
+    "y": models["house"]["position"]["y"] + (models["house"]["dimension"]["y"] / 2 + models["car"]["dimension"]["y"] / 2 + 5),  # 5 cm gap
+    "z": models["car"]["dimension"]["z"] / 2
+}
+```
+
+This layout ensures that each model is visually distinct, with no overlaps and maintaining a coherent arrangement in a 3D cubic space centered around the house. Each model's position is calculated to create a balanced and engaging scene from the observer's front view.
+
+***
+
+Scene description: {user_prompt}
+
+Let's think step by step and write the python codes.

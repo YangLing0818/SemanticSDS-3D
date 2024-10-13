@@ -1,0 +1,259 @@
+{
+    "scene_models": [
+        {
+            "name": "a mannequin",
+            "stable diffusion prompt": "A dress, divided horizontally, is made of feathers and moss",
+            "dimensions": {
+                "x": 0.5210397354969826,
+                "y": 0.5210397354969826,
+                "z": 1.4886849585628075
+            },
+            "position": {
+                "x": 0.0,
+                "y": -0.018608561982035154,
+                "z": 0.2398436877684523
+            },
+            "parts_in_complementary_format": {
+                "depth split": [
+                    {
+                        "size": 1,
+                        "vertical split": [
+                            {
+                                "size": 1,
+                                "horizontal split": [
+                                    {
+                                        "size": 1,
+                                        "prompt": "a dress made of red feathers on a mannequin"
+                                    },
+                                    {
+                                        "size": 1,
+                                        "prompt": "a dress made of moss on a mannequin"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "parts_in_local_01_coords": [
+                {
+                    "prompt": "a dress made of red feathers on a mannequin",
+                    "min_corner": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "max_corner": [
+                        1.0,
+                        0.5,
+                        1.0
+                    ]
+                },
+                {
+                    "prompt": "a dress made of moss on a mannequin",
+                    "min_corner": [
+                        0.0,
+                        0.5,
+                        0.0
+                    ],
+                    "max_corner": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ]
+                }
+            ],
+            "parts_in_global_coords": [
+                {
+                    "prompt": "a dress made of red feathers on a mannequin",
+                    "min_corner": [
+                        -0.2605198677484913,
+                        -0.27912842973052643,
+                        -0.5044987915129514
+                    ],
+                    "max_corner": [
+                        0.2605198677484913,
+                        -0.018608561982035143,
+                        0.9841861670498561
+                    ]
+                },
+                {
+                    "prompt": "a dress made of moss on a mannequin",
+                    "min_corner": [
+                        -0.2605198677484913,
+                        -0.018608561982035143,
+                        -0.5044987915129514
+                    ],
+                    "max_corner": [
+                        0.2605198677484913,
+                        0.24191130576645614,
+                        0.9841861670498561
+                    ]
+                }
+            ],
+            "scale": 1.661068245974463
+        },
+        {
+            "name": "A vase holding a single blue tulip",
+            "stable diffusion prompt": "A vase holding a single blue tulip",
+            "dimensions": {
+                "x": 0.2605198677484913,
+                "y": 0.2605198677484913,
+                "z": 0.7443424792814037
+            },
+            "position": {
+                "x": 0.0,
+                "y": -0.43394797975940286,
+                "z": -0.13853040586626122
+            },
+            "parts_in_complementary_format": {
+                "depth split": [
+                    {
+                        "size": 0.25,
+                        "vertical split": [
+                            {
+                                "size": 1,
+                                "horizontal split": [
+                                    {
+                                        "size": 1,
+                                        "prompt": "A vase holding a single blue tulip"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "parts_in_local_01_coords": [
+                {
+                    "prompt": "A vase holding a single blue tulip",
+                    "min_corner": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "max_corner": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ]
+                }
+            ],
+            "parts_in_global_coords": [
+                {
+                    "prompt": "A vase holding a single blue tulip",
+                    "min_corner": [
+                        -0.13025993387424564,
+                        -0.5642079136336485,
+                        -0.5107016455069631
+                    ],
+                    "max_corner": [
+                        0.13025993387424564,
+                        -0.3036880458851572,
+                        0.23364083377444067
+                    ]
+                }
+            ],
+            "scale": 0.8305341229872315
+        },
+        {
+            "name": "A vase holding a bunch of blue roses",
+            "stable diffusion prompt": "A vase with a bunch of blue roses",
+            "dimensions": {
+                "x": 0.37217123964070187,
+                "y": 0.37217123964070187,
+                "z": 0.818776727209544
+            },
+            "position": {
+                "x": 0.0,
+                "y": 0.452556541741438,
+                "z": -0.10131328190219104
+            },
+            "parts_in_complementary_format": {
+                "depth split": [
+                    {
+                        "size": 1,
+                        "vertical split": [
+                            {
+                                "size": 1,
+                                "horizontal split": [
+                                    {
+                                        "size": 1,
+                                        "prompt": "a vase"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": 1,
+                                "horizontal split": [
+                                    {
+                                        "size": 1,
+                                        "prompt": "a bunch of blue roses"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "parts_in_local_01_coords": [
+                {
+                    "prompt": "a vase",
+                    "min_corner": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "max_corner": [
+                        1.0,
+                        1.0,
+                        0.5
+                    ]
+                },
+                {
+                    "prompt": "a bunch of blue roses",
+                    "min_corner": [
+                        0.0,
+                        0.0,
+                        0.5
+                    ],
+                    "max_corner": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ]
+                }
+            ],
+            "parts_in_global_coords": [
+                {
+                    "prompt": "a vase",
+                    "min_corner": [
+                        -0.18608561982035093,
+                        0.26647092192108707,
+                        -0.5107016455069631
+                    ],
+                    "max_corner": [
+                        0.18608561982035093,
+                        0.638642161561789,
+                        -0.10131328190219102
+                    ]
+                },
+                {
+                    "prompt": "a bunch of blue roses",
+                    "min_corner": [
+                        -0.18608561982035093,
+                        0.26647092192108707,
+                        -0.10131328190219102
+                    ],
+                    "max_corner": [
+                        0.18608561982035093,
+                        0.638642161561789,
+                        0.308075081702581
+                    ]
+                }
+            ],
+            "scale": 0.9733540939716468
+        }
+    ],
+    "user_prompt": "A mannequin adorned with a dress divided horizontally, made of feathers and moss, stands in the center, flanked by a vase holding a single blue tulip and another with a bunch of blue roses"
+}

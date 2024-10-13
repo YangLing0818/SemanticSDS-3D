@@ -1,0 +1,91 @@
+As a 3D model designer, you are tasked with designing an object described in the user prompt. This object has multiple attributes, with different parts possessing different attributes. Your job is to divide the object as described in the user prompt into parts, each with a single attribute, and rewrite the corresponding prompt for each part. Specifically, you need to divide the 3D bounding box encompassing the object into different complementary smaller bounding boxes, and output in the specific format.
+
+# The specific format description
+The output should be a JSON object that represents the 3D bounding box of the object. This object should have a key named "depth split" that contains an array of objects. Each object represents a division of the bounding box along the depth axis. The object should have two keys: "size" and "vertical split". The "size" key represents the size of this part relative to other parts in the same split.
+
+The "vertical split" key should contain an array of objects. Each object represents a division of the bounding box along the vertical axis. The object should have two keys: "size" and "horizontal split". 
+
+The "size" key represents the size of this part relative to other parts in the same split.
+
+The "horizontal split" key should contain an array of objects. Each object represents a division of the bounding box along the horizontal axis. The object should have two keys: "size" and "prompt". 
+
+The "size" key represents the size of this part relative to other parts in the same split.
+
+The "prompt" key should contain the prompt for the specific part of the object. The prompt should be a string that describes the part of the object and its single attributes.
+
+# Examples
+Here are some examples, follow the example to plan for the user prompt. 
+user prompt: "a car made of ice, cheese, LEGO, sushi and wood"
+Let's think step by step
+Alright, let's break down your example into a detailed 3D layout plan using the split ratio method you described. We'll follow the rules you've specified, focusing on separating elements and their attributes into different regions while maintaining a logical and aesthetically pleasing composition. And for an object with a single attribute, like "a detailed image of beret", then just split into one part. Do not split too many parts.
+# User Prompt:
+"a car made of ice, cheese, LEGO, sushi and wood"
+# Key Phrases Identification:
+1. "a car made of ice"
+2. "a car made of cheese"
+3. "a car made of LEGO"
+4. "a car made of sushi"
+5. "a car made of wood"
+
+# Detailed 3D Layout Plan:
+1. Split the bounding box into two along the depth axis. The first part will contain the ice and cheese cars, and the second part will contain the LEGO, sushi, and wood cars. 
+2. The first depth split is further divided into one part. This part is then split horizontally into two equal parts, one for the ice car and one for the cheese car.
+3. The second depth split is divided vertically into two parts. The first part is split horizontally into two parts, one smaller part for the LEGO car and a larger part for the sushi car. The second part of the vertical split contains the wood car.
+
+# Final Output:
+
+```json
+{
+    "depth split" : [
+        {
+            "size" : 1,
+            "vertical split" : [
+                {
+                    "size" : 1,
+                    "horizontal split" : [
+                        {
+                            "size" : 1,
+                            "prompt" : "a car made of ice"
+                        },
+                        {
+                            "size" : 1,
+                            "prompt" : "a car made of cheese"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "size" : 2,
+            "vertical split" : [
+                {
+                    "size" : 2,
+                    "horizontal split" : [
+                        {
+                            "size" : 1,
+                            "prompt" : "a car made of LEGO"
+                        },
+                        {
+                            "size" : 2,
+                            "prompt" : "a car made of sushi"
+                        }
+                    ]
+                },
+                {
+                    "size" : 1,
+                    "horizontal split" : [
+                        {
+                            "size" : 1,
+                            "prompt" : "a car made of wood"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+```
+
+user prompt: "{user_prompt}"
+Let's think step by step
+Alright, let's break down your example into a detailed 3D layout plan using the split ratio method you described. We'll follow the rules you've specified, focusing on separating elements and their attributes into different regions while maintaining a logical and aesthetically pleasing composition.

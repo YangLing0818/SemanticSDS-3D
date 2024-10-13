@@ -1,0 +1,100 @@
+In the JSON file provided below, the 'scene_prompt' describes the entire scene, while each 'stable diffusion prompt' describes a specific object and serves as the prompt for Stable Diffusion to generate that object. Based on the 'scene_prompt' which describes the whole scene, please recaption each 'stable diffusion prompt'. When describing an object, omit other objects! When describing an object, don't mention other objects! For example, if "beret" is an individual object, then "a corgi wearing a beret" is wrong and "a high-quality photo of a corgi" is right. Output in JSON format.
+For example, the scene prompt is "A corgi wearing a beret is to the left of a house. A car made of cheese, sushi, and wood is to the right of the house. The house is straddling a divide between spring and winter horizontally." and the describing object is "house", then "The house is straddling a divide between spring and winter horizontally." is right.
+
+Here are some examples for you to follow.
+Here is the JSON file to modified. Let's recaption each 'stable diffusion prompt' step by step.
+
+```json
+{
+    "scene_prompt": "A corgi wearing a beret is situated to the left of a house, while a car is positioned to the right of the house. The house itself straddles a divide that separates spring and winter horizontally. The car above is split into two layers along the depth axis. The front layer of the car is constructed from wood. The left half of the rear layer is made of sushi, and the right half is made of cheese.",
+    "objects": [
+        {
+            "name": "corgi",
+            "stable diffusion prompt": "corgi"
+        },
+        {
+            "name": "beret",
+            "stable diffusion prompt": "beret"
+        },
+        {
+            "name": "house",
+            "stable diffusion prompt": "house"
+        },
+        {
+            "name": "car",
+            "stable diffusion prompt": "Car made of wood, sushi, and cheese"
+        }
+    ]
+}
+```
+
+Here is the step-by-step process to recaption each 'stable diffusion prompt' based on the 'scene_prompt' provided in the JSON file:
+
+1. **Read through the Scene Prompt**:
+    - Understand the entire scenario described in the 'scene_prompt' to get an idea of each object's significance and context within the scene.
+
+2. **Identify Individual Objects**:
+    - List each object that has been mentioned in the 'scene_prompt'. In this case, the objects are the corgi, beret, house, and car.
+
+3. **Recaption Each Object**:
+    - Focus on each object individually and describe it without referring to other objects to ensure clarity in object-specific prompts. Use the context provided by the scene prompt to enhance the description if applicable.
+
+4. **Modify the JSON Object**:
+    - For each object in the 'objects' array, update the 'stable diffusion prompt' to reflect a focused and context-sensitive description of that object alone.
+
+5. **Finalize the JSON Output**:
+    - Ensure the JSON format remains valid, and all objects are accurately updated with their new descriptions.
+
+### Example Breakdown per Object:
+
+- **Corgi**:
+  - Original: "corgi"
+  - Updated: "A high-quality photo of a corgi"
+  - **Reasoning**: The prompt should focus solely on the corgi, omitting any accessories or context related to its placement or attire.
+
+- **Beret**:
+  - Original: "beret"
+  - Updated: "A high-quality photo of a beret"
+  - **Reasoning**: Similar to the corgi, the beret is depicted alone without any association with other objects or the scene.
+
+- **House**:
+  - Original: "house"
+  - Updated: "The house straddles a divide that separates spring and winter horizontally."
+  - **Reasoning**: This description uses the unique aspect of the house as described in the scene, focusing on its position relative to the seasonal divide.
+
+- **Car**:
+  - Original: "Car made of wood, sushi, and cheese"
+  - Updated: "Car, with front layer made of wood and rear layer made of sushi and cheese. The left half of the rear layer is made of sushi, and the right half is made of cheese."
+  - **Reasoning**: This recaption elaborates on the unique construction of the car, detailing the materials of each part without referencing its location relative to other objects.
+
+Here is the final JSON output after applying the described modifications:
+
+```json
+{
+    "scene_prompt": "A corgi wearing a beret is situated to the left of a house, while a car is positioned to the right of the house. The house itself straddles a divide that separates spring and winter horizontally. The car above is split into two layers along the depth axis. The front layer of the car is constructed from wood. The left half of the rear layer is made of sushi, and the right half is made of cheese.",
+    "objects": [
+        {
+            "name": "corgi",
+            "stable diffusion prompt": "A high-quality photo of a corgi"
+        },
+        {
+            "name": "beret",
+            "stable diffusion prompt": "A high-quality photo of a beret"
+        },
+        {
+            "name": "house",
+            "stable diffusion prompt": "The house straddles a divide that separates spring and winter horizontally."
+        },
+        {
+            "name": "car",
+            "stable diffusion prompt": "Car, with front layer made of wood and rear layer made of sushi and cheese. The left half of the rear layer is made of sushi, and the right half is made of cheese."
+        }
+    ]
+}
+```
+
+Here is the JSON file to modified. Let's recaption each 'stable diffusion prompt' step by step.
+
+```json
+{original_json}
+```
