@@ -1,5 +1,5 @@
-# SemanticSDS: Semantic Score Distillation Sampling for Compositional Text-to-3D Generation
-**TL;DR:** By leveraging program-aided layout planning, augmenting 3D Gaussians with semantic embeddings, and guiding SDS with rendered semantic maps, SemanticSDS unlocks the compositional capabilities of pre-trained diffusion models, generating complex 3D scenes comprising multiple objects with various attributes.
+# Semantic Score Distillation Sampling for Compositional Text-to-3D Generation
+**TL;DR:** Official repo of [SemanticSDS](https://arxiv.org/abs/2410.09009). By leveraging program-aided layout planning, augmenting 3D Gaussians with semantic embeddings, and guiding SDS with rendered semantic maps, SemanticSDS unlocks the compositional capabilities of pre-trained diffusion models, generating complex 3D scenes comprising multiple objects with various attributes.
 <details>
     <summary>Click for full abstract</summary>
 Generating high-quality 3D assets from textual descriptions remains a pivotal challenge in computer graphics and vision research. Due to the scarcity of 3D data, state-of-the-art approaches utilize pre-trained 2D diffusion priors, optimized through Score Distillation Sampling (SDS). Despite progress, crafting complex 3D scenes featuring multiple objects or intricate interactions is still difficult. To tackle this, recent methods have incorporated box or layout guidance. However, these layout-guided compositional methods often struggle to provide fine-grained control, as they are generally coarse and lack expressiveness. To overcome these challenges, we introduce a novel SDS approach, Semantic Score Distillation Sampling (SemanticSDS), designed to effectively improve the expressiveness and accuracy of compositional text-to-3D generation. Our approach integrates new semantic embeddings that maintain consistency across different rendering views and clearly differentiate between various objects and parts. These embeddings are transformed into a semantic map, which directs a region-specific SDS process, enabling precise optimization and compositional generation. By leveraging explicit semantic guidance, our method unlocks the compositional capabilities of existing pre-trained diffusion models, thereby achieving superior quality in 3D content generation, particularly for complex objects and scenes. Experimental results demonstrate that our SemanticSDS framework is highly effective for generating state-of-the-art complex 3D content.
@@ -149,7 +149,7 @@ Thanks to the awesome open-source projects of [GSGEN](https://github.com/gsgen3d
 @article{yang2024semanticsds,
   title={Semantic Score Distillation Sampling for Compositional Text-to-3D Generation},
   author={Yang, Ling and Zhang, Zixiang and Han, Junlin and Zeng, Bohan and Li, Runjia and Torr, Philip and Zhang, Wentao},
-  journal={arXiv preprint arXiv:},
+  journal={arXiv preprint arXiv:2410.09009},
   year={2024}
 }
 ```
