@@ -1,4 +1,9 @@
 # Semantic Score Distillation Sampling for Compositional Text-to-3D Generation
+<p align="left">
+  <a href='https://arxiv.org/abs/2410.09009'>
+  <img src='https://img.shields.io/badge/Arxiv-2410.09009-A42C25?style=flat&logo=arXiv&logoColor=A42C25'></a> 
+  </p>
+  
 **TL;DR:** Official repo of [SemanticSDS](https://arxiv.org/abs/2410.09009). By leveraging program-aided layout planning, augmenting 3D Gaussians with semantic embeddings, and guiding SDS with rendered semantic maps, SemanticSDS unlocks the compositional capabilities of pre-trained diffusion models, generating complex 3D scenes comprising multiple objects with various attributes.
 <details>
     <summary>Click for full abstract</summary>
